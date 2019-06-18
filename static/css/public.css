@@ -1,0 +1,481 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  font-family: "PingFangSC-Regular","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*去除input属性type=number时候后面的额上下小尾巴*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+.el-input__inner {
+  line-height: 0px!important;
+}
+a {
+  color: #606266;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+a:hover{
+  color: #1890ff
+}
+li {
+  list-style: none;
+}
+/*---滚动条默认显示样式--*/ 
+::-webkit-scrollbar-thumb{  
+   background-color:#e4e7ed;  
+   height:50px;
+   -webkit-border-radius:6px;
+}  
+/*---鼠标点击滚动条显示样式--*/ 
+::-webkit-scrollbar-thumb:hover{  
+   background-color:#c8cbd3;  
+   height:50px;  
+   -webkit-border-radius:6px;  
+}  
+/*---滚动条大小--*/ 
+::-webkit-scrollbar{  
+   width:6px;  
+   height:6px;  
+}  
+/*---滚动框背景样式--*/ 
+::-webkit-scrollbar-track-piece{  
+   background-color:#f0f2f5;  
+   -webkit-border-radius:6px;  
+}
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  background: #F0F2F5;
+}
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:before, .clearfix:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: "";
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: rgb(250, 255, 189); /* #FAFFBD; */
+  background-image: none;
+  color: rgb(0, 0, 0);
+}
+.el-table th{
+  background: #f1f3f7!important;
+}
+/* 丹 新加*/
+#app,#index,#content{
+  height: 100%;
+}
+
+/* table 的表头 -- 背景色 */
+.el-table thead tr,.el-table thead th{
+  background: #f1f3f7;
+}
+/*提示文字*/
+.tip-text{
+  font-size: 12px;
+  color: #909399;
+  position: absolute;
+  bottom: -30px;
+}
+/*微信文本*/
+.my-textarea a{
+  color: #1890ff
+}
+/* 暂无数据 ElementUI */
+.el-table__empty-block .el-table__empty-text{
+  position: static;
+}
+.no-data-wrap{
+  text-align: center;
+  padding: 80px 0;
+}
+.no-data-wrap .no-data-icon{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+.no-data-wrap .no-data-icon img{
+  width:100%;
+  height:100%;
+}
+.no-data-wrap p {
+  color: #909399;
+  line-height: 1;
+}
+/* 去掉表格的最后一条线 */
+.table-no-line-wrap.el-table::before{
+  height: 0
+}
+/* 提示文字的icon */
+.tooltip-icon{
+  color: #909399;
+  font-size: 14px !important;
+}
+.tooltip-icon:hover{
+  color: #909399;
+}
+/* 分页器 */
+.pagination{
+  text-align: right;
+  margin: 24px 0 30px 0;
+}
+/* 规范2.0 */
+/* 状态点 */
+.dm-status--success:before {
+  background-color: #52c41a;
+}
+.dm-status--info:before {
+  background-color: #d9d9d9;
+}
+.dm-status--primary:before {
+  background-color: #1890ff;
+}
+.dm-status--error:before{
+  background-color: #f5222d;
+}
+
+/* 文字按钮撑高的问题 */
+table /deep/ .el-button--text{
+  padding: 0;
+}
+/* 分页器尺寸 */
+.pagination /deep/ .el-pagination .el-select .el-input .el-input__inner{
+  height: 28px !important;
+}
+
+/*文本域高度*/
+.el-textarea /deep/  .el-textarea__inner{
+  height: 94px;
+}
+/* 首页头部 右侧 */
+.el-popper{
+  box-sizing: content-box;
+}
+.el-popover.user-header-pop{
+  min-width: 74px;
+  padding: 8px;
+  background: #0A1E4E;
+  border: 1px solid #132F71;
+  box-sizing: border-box;
+}
+.el-popper[x-placement^="bottom"].user-header-pop .popper__arrow::after{
+  border-bottom-color: #0A1E4E;
+  top: 0;
+}
+/** 公用头部的右侧*/
+.el-popover.com-user-header-pop{
+  min-width: 74px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+/* 弹框 按钮上的线*/
+/* .el-dialog__footer {
+  border-top: none !important;
+}
+.el-dialog__title{
+  font-size: 15px !important;
+  line-height: 18px !important;
+  font-weight:500;
+}
+.el-dialog__header{
+  padding: 13px 0 !important;
+  margin:0 20px;
+  border-bottom:1px solid #dcdfe6;
+}
+.el-dialog__body{
+  padding-bottom: 0 !important;
+}
+.el-dialog__footer{
+  text-align: center !important;
+  padding: 6px 0 20px 0 !important;
+}
+.el-dialog__footer .el-button + .el-button{
+  margin-left: 20px !important;
+} */
+/* 新建角色中 权限设置*/
+.tree-node-content > .tree-wrap >  .tree{
+  display: flex;
+  margin-bottom: 10px;
+}
+.tree-node-content > .tree-wrap > .tree > .first-level,.tree-node-content > .tree-wrap > .tree > .single_btn{
+  flex: 0 0 225px;
+  width: 225px;
+  height: auto;
+  min-height: 40px;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #f6f6f6;
+  border: 1px solid #dcdfe6;
+}
+.tree-node-content > .tree-wrap > .tree > .tree-node-wrap{
+  flex: 1;
+  padding-left: 0;
+  border-right: 1px solid #dcdfe6;
+}
+.tree-node-content > .tree-wrap > .tree > .tree-node-wrap.no-line-tree{
+  border-right: none;
+}
+.tree-node-content > .tree-wrap > .tree > .tree-node-wrap > .tree-wrap:last-child{
+  border-bottom: 1px solid #dcdfe6;
+}
+.tree-node-content > .tree-wrap > .tree > .tree-node-wrap > .tree-wrap > .tree > .single_btn,.tree-node-content > .tree-wrap > .tree > .tree-node-wrap > .tree-wrap > .tree > .first-level{
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  font-weight: 500;
+  background: #f6f6f6;
+  border-top: 1px solid #dcdfe6;
+}
+.tree-node-content > .tree-wrap > .tree > .tree-node-wrap > .tree-wrap > .tree > .single_btn > i,.tree-node-content > .tree-wrap > .tree > .tree-node-wrap > .tree-wrap > .tree > .first-level > span > i{
+  width: 30px;
+}
+
+
+ /* elementUI 里的树形结构  权限用 */
+.account-limit-wrap .el-tree-node__content{
+  height: 35px;
+  padding-right: 20px
+}
+.account-limit-wrap .el-tree > .el-tree-node{
+  display: flex;
+  margin-bottom: 10px;
+}
+.account-limit-wrap .el-tree > .el-tree-node > .el-tree-node__content{
+  flex: 0 0 225px;
+  width: 225px;
+  height: auto;
+  min-height: 40px;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #f6f6f6 !important;
+  border: 1px solid #dcdfe6;
+}
+.account-limit-wrap .el-tree > .el-tree-node > .el-tree-node__children{
+  flex: 1;
+  padding-left: 0;
+  border-right: 1px solid #dcdfe6;
+  border-bottom: 1px solid #dcdfe6;
+}
+.account-limit-wrap .el-tree > .el-tree-node > .el-tree-node__children.no-right-line{
+  border-right: none;
+  border-bottom: none;
+}
+.account-limit-wrap .el-tree > .el-tree-node > .el-tree-node__children > .el-tree-node > .el-tree-node__content{
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  font-weight: 500;
+  background: #f6f6f6 !important;
+  border-top: 1px solid #dcdfe6;
+  margin-left: 0 !important;
+}
+.content-content .account-limit-wrap .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner{
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+.account-limit-wrap .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after{
+  border-color: #fff;
+}
+/* 树形结构的暂无数据 */
+.account-limit-wrap .el-tree__empty-block{
+  min-height: 100px;
+  padding: 80px 0;
+}
+.account-limit-wrap .el-tree__empty-block .el-tree__empty-text{
+  padding-top: 82px;
+  background: url('../img/no-data_icon.png') no-repeat top center;
+}
+
+/* 常用的宽度 */
+.w350{
+  width: 350px;
+}
+
+/*内容宽度1400px*/
+.my-content-wrap{
+  min-width: 1400px;
+  width: 100%;
+  height: 100%;
+}
+.my-content-content{
+  padding: 25px 44px 20px;
+  min-height: calc(100% - 200px);
+}
+.my-left-aside{
+  width: 200px;
+  height: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(255,255,255,1);
+  box-sizing: border-box;
+}
+.my-right-wrap{
+  width: calc(100% - 210px);
+  background: #f0f2f5;
+  padding-left: 10px;
+  border: 1px solid rgba(240,242,245,1);
+  box-shadow: 0px 2px 8px 0px rgba(220,223,230,0.30);
+}
+.my-right-content{
+  background: #FFFFFF;
+  height: 100%;
+}
+/* 公共使用 */
+.margin-l8 {
+  margin-left: 8px;
+}
+ /* 表格日期的第二行 */
+ .date-second-item{
+   color: #909399
+ }
